@@ -12,6 +12,7 @@ def digits_to_words(input_string):
     convert = ''
     for digit in digit_string:
         convert += digit_set.get(int(digit)) + ' '
+    convert = convert.rstrip()
 
     return convert
 
@@ -35,3 +36,5 @@ def to_camel_case(underscore_str):
         underscore_str = underscore_str.replace(underscore_str[0], underscore_str[0].lower(), 1)
 
         return underscore_str
+
+digits_to_words("Zip Code: 19104")
